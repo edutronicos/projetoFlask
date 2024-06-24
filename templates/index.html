@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sistema de Cadastro de Alunos</title>
+    <!-- <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    /> -->
+    <link href="/static/css/styles_.css" rel="stylesheet">
+  </head>
+  <body>
+    
+      <h1>Bem-vindo ao sistema para cadastrar alunos.</h1>
+      <nav>
+        <a href="{{ url_for('cadastro') }}" class="button">Cadastrar Novo Aluno</a>
+        <a href="{{ url_for('lista') }}" class="button">Lista de Alunos</a>
+        <a href="{{ url_for('pesquisar') }}" class="button">Pesquisar Aluno</a>
+      </nav>
+
+      <nav>
+        <a href="{{ url_for('login') }}" class="button">SAIR</a>
+      </nav>
+    
+  </body>
+</html>

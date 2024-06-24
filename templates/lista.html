@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos Cadastrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1 style="margin-top: 100px;">Lista de Alunos Cadastrados</h1>
+    <table style="box-shadow: 5px 5px 10px black;">
+        <tr>
+            <th class="bg-info">Nome</th>
+            <th class="bg-info">RA</th>
+            <th class="bg-info">Sexo</th>
+            <th class="bg-info">Nascimento</th>
+            <th class="bg-info">Ações</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno[1] }}</td>
+            <td>{{ aluno[2] }}</td>
+            <td>{{ aluno[3] }}</td>
+            <td>{{ aluno[4].strftime('%d/%m/%Y') }}</td>
+            <td><a href="{{ url_for('atualizar', id = aluno[0]) }}" class="button">Atualizar</a> | <a href="{{ url_for('deletar_aluno', id = aluno[0]) }}" class="button">Deletar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <nav>
+        <a href="{{ url_for('gerar') }}" class="button">Gerar Relatório</a>
+        <a href="{{ url_for('index') }}" class="button">Voltar</a>
+    </nav>
+    
+</body>
+</html>

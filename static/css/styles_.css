@@ -1,0 +1,131 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/fundo1.jpeg');
+    background-size: contain;
+    background-position: center;
+} */
+
+body {
+    background-image: url('/static/images/fundo3.jpg');
+    background-size: 100%;
+    
+}
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffffd3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+.login-container .btn-primary {
+    background: #007bff;
+    border: none;
+}
+
+.login-container .btn-secondary {
+    background: #6c757d;
+    border: none;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 150px;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 5px black;
+}
+
+nav a.button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.h1_cadastro {
+    margin-top: 50px;
+}
+

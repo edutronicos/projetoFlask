@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pesquisar Aluno</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <h1 style="margin-top: 100px;">Pesquisar Aluno</h1>
+    <form action="{{ url_for('pesquisar') }}" method="post"  style="box-shadow: 3px 3px 5px #000000;">
+      <label for="nome">Nome do Aluno:</label>
+      <input type="text" id="nome" name="nome" /><br />
+      <label for="ra">RA:</label>
+      <input type="text" name="ra" id="ra">
+      <input type="submit" value="Pesquisar" />
+    </form>
+    {% if error %}
+    <p style="color: red">{{ error }}</p>
+    {% endif %}
+
+    {% if aluno %}
+    <div class="w-100" >
+      <div class="w-50 mx-auto">
+        <table style="box-shadow: 5px 5px 10px black;">
+          <tr>
+            <th class="bg-info">Nome</th>
+            <th class="bg-info">RA</th>
+            <th class="bg-info">Sexo</th>
+            <th class="bg-info">Nascimento</th>
+          </tr>
+          {% for alunos in aluno %}
+          <tr>
+              <td>{{ alunos[1] }}</td>
+              <td>{{ alunos[2] }}</td>
+              <td>{{ alunos[3] }}</td>
+              <td>{{ alunos[4].strftime('%d/%m/%Y') }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+    <nav>
+      <a href="{{ url_for('index') }}" class="button">Voltar</a>
+    </nav>
+  </body>
+</html>
