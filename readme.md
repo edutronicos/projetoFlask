@@ -1,5 +1,5 @@
 # CRUD de Cadastro de Alunos com Flask
-Este projeto foi desenvolvido para a disciplina de Projeto de Software do segundo período do curso de Análise e Desenvolvimento de Sistemas. O objetivo é demonstrar um sistema CRUD (Criar, Ler, Atualizar, Deletar) de cadastro de alunos com uma interface simples e intuitiva, incluindo tela de login para acesso. O banco de dados MySQL é utilizado para armazenar os dados de usuários, logins e informações dos alunos.
+Este projeto foi desenvolvido para a disciplina de Banco de dados do quinto período do curso de Análise e Desenvolvimento de Sistemas. O objetivo é demonstrar um sistema CRUD (Criar, Ler, Atualizar, Deletar) de cadastro de alunos com uma interface simples e intuitiva, incluindo tela de login para acesso. O banco de dados MySQL é utilizado para armazenar os dados de usuários, logins e informações dos alunos.
 
 ## Importante: 
 O sistema de login é uma simulação e não utiliza criptografia. A validação ocorre apenas comparando o usuário e senha informados com os dados cadastrados no banco de dados.
